@@ -30,14 +30,14 @@ docker compose down
 
 The database is reachable from:
 
-- [localhost:<POSTGRES_HOST_PORT>](localhost:<POSTGRES_HOST_PORT>) on the local machine
-- [postgres:5432](postgres:5432) from other containers in the Docker network `postgres-network`
+- `localhost:<POSTGRES_HOST_PORT>` on the local machine
+- `postgres:5432` from other containers in the Docker network `postgres-network`
 
 ## Volume
 
 The `pgdata` volume persists the database, so data is not lost when stopped.
 
-To stop and delete the volume (⚠️ **this will erase ALL database data**):
+To stop and delete the volume (**this will erase ALL database data**):
 
 ```bash
 docker compose down -v
