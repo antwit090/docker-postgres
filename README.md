@@ -4,15 +4,17 @@ A simple Docker setup for running a PostgreSQL database.
 
 ## Setup
 
-1. Copy the `.env.example` to `.env` and fill in your desired credentials.
+1. Update the files in the `secrets-example` directory with your desired credentials.
 
-2. Create the Docker network:
+2. Rename the `secrets-example` directory to `secrets`.
+
+3. Create the Docker network:
 
 ```bash
 docker network create postgres-network
 ```
 
-3. Start the PostgreSQL container:
+4. Start the PostgreSQL container:
 
 ```bash
 docker compose up -d
@@ -20,7 +22,7 @@ docker compose up -d
 
 > If the port is already in use, change the `POSTGRES_HOST_PORT` variable in the `.env` file.
 
-4. To stop the container:
+5. To stop the container:
 
 ```bash
 docker compose down
